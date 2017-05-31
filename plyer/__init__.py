@@ -8,7 +8,7 @@ __all__ = ('accelerometer', 'audio', 'barometer', 'battery', 'call', 'camera',
            'compass', 'email', 'filechooser', 'flash', 'gps', 'gravity',
            'gyroscope', 'irblaster', 'light', 'orientation', 'notification',
            'proximity', 'sms', 'tts', 'uniqueid', 'vibrator', 'wifi',
-           'temperature')
+           'temperature', 'statusbar')
 
 __version__ = '1.3.1dev'
 
@@ -87,3 +87,6 @@ wifi = Proxy('wifi', facades.Wifi)
 
 #: Temperature proxy to :class:`plyer.facades.Temperature`
 temperature = Proxy('temperature', facades.Temperature)
+
+#: StatusBar proxy to :class:`plyer.facades.StatusBar`
+statusbar = Proxy('statusbar', facades.StatusBar)
