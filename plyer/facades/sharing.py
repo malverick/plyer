@@ -16,7 +16,7 @@ Simple Examples
 To share text::
 
     >>> from plyer import sharing
-    >>> sharing.share(text)
+    >>> sharing.share_text(text)
     # A window will open asking the user to choose the app with which he wants
     to share the data.
 
@@ -28,16 +28,25 @@ class Sharing(object):
     Sharing facade.
     '''
 
-    def share(self, text):
+    def share_text(self, text):
         '''
         Share the text with different apps.
 
         :param text: Data to share
         :type text: String
         '''
-        return self._share()
+        return self._share_text(text)
+
+    def share_img(self):
+        '''
+        Share the image with different apps.
+        '''
+        return self._share_img()
 
     #private
 
-    def _share(self, text):
+    def _share_text(self, text):
+        raise NotImplementedError()
+
+    def _share_img(self):
         raise NotImplementedError()
